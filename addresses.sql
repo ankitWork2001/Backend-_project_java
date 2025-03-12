@@ -1,0 +1,11 @@
+CREATE TABLE addresses 
+(
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
+user_id BIGINT,
+address_line VARCHAR(255),
+city VARCHAR(100),
+state VARCHAR( 100),
+postal_code VARCHAR(20),
+country VARCHAR(100),
+FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
